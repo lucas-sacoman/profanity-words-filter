@@ -6,7 +6,7 @@ function App() {
 	const [loading, setLoading] = useState(false);
 
 	// Analyze possible improvements to prompt
-	const prompt = `Observe se na seguinte sentença existe palavrões, até mesmo os abreviados em português. '${inputValue}'. Se sim, troque todos os palavrões por asteriscos.`;
+	const prompt = `Observe se na seguinte sentença existe palavrões, até mesmo os abreviados em português. '${inputValue}'. Se sim, troque todos os palavrões por asteriscos. Senão, retorne a sentença da forma que foi escrita`;
 
 	const handleFetchGptData = (e: FormEvent) => {
 		e.preventDefault();
@@ -34,8 +34,8 @@ function App() {
 			.then(response => response.json())
 			.then(data => {
 				const textWithoutBadWords = data.choices[0].text
-					.split(',')
-					.map((word: string) => word.replaceAll('\n', ''));
+					.replaceAll('\n', '')
+					.replaceAll('.', '');
 
 				setFinalText(textWithoutBadWords);
 			})
