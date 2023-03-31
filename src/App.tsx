@@ -63,7 +63,7 @@ function App() {
 					Texto final: {loading ? 'carregando...' : finalText}
 				</span>
 			</div>
-		</main>
+		</main> 
 	);
 }
 
