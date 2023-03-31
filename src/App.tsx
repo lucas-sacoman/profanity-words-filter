@@ -54,7 +54,7 @@ function App() {
 				>
 					<textarea
 						className="w-full p-2 border bg-gray-700 rounded text-gray-50 caret-teal-700"
-						placeholder="Digite aqui seu texto com palavrões aqui"
+						placeholder="Digite aqui seu texto com palavrões"
 						name="profanity"
 						id="profanity"
 						value={inputValue}
