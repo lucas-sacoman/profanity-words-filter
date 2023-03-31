@@ -5,6 +5,7 @@ function App() {
 	const [finalText, setFinalText] = useState('');
 	const [loading, setLoading] = useState(false);
 
+	// Analyze possible improvements to prompt
 	const prompt = `Observe se na seguinte sentença existe palavrões, até mesmo os abreviados em português. '${inputValue}'. Se sim, troque todos os palavrões por asteriscos. Senão, retorne 'false'`;
 
 	const handleFetchGptData = (e: FormEvent) => {
